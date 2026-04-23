@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, Target, Heart, Globe, Sparkles, Users, BookOpen } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { siteConfig } from '@/lib/site-config'
 
 export const metadata: Metadata = {
   title: '概要',
@@ -107,7 +108,7 @@ export default function AboutPage() {
               </div>
               
               <div className="mt-8 flex flex-wrap gap-4">
-                <Button href="https://learn.rhgj.jp">
+                <Button href={siteConfig.ctaUrl}>
                   始めましょう
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
@@ -287,7 +288,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
-              href="https://learn.rhgj.jp"
+              href={siteConfig.ctaUrl}
               variant="secondary"
               size="lg"
               className="w-full sm:w-auto"

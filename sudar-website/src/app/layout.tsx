@@ -3,40 +3,41 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { siteConfig } from '@/lib/site-config'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
   title: {
-    default: '知恵塾 - 学習のためのオペレーティングシステム',
-    template: '%s | 知恵塾',
+    default: `${siteConfig.brandName} - 学習のためのオペレーティングシステム`,
+    template: `%s | ${siteConfig.brandName}`,
   },
-  description: '知恵塾はAIネイティブな学習オペレーティングシステムです。数分で研修を作成、アダプティブに配信し、すべての学習者に記憶するチューターを提供します。あなたと共に、あなたのために学びます。',
+  description: `${siteConfig.brandName}はAIネイティブな学習オペレーティングシステムです。数分で研修を作成、アダプティブに配信し、すべての学習者に記憶するチューターを提供します。あなたと共に、あなたのために学びます。`,
   keywords: ['学習管理システム', 'LMS', 'AIチューター', 'アダプティブラーニング', 'eラーニング', '企業研修', 'インストラクショナルデザイン', 'SCORM'],
   authors: [{ name: 'Dhanikesh Karunanithi' }],
   creator: 'Dhanikesh Karunanithi',
   openGraph: {
     type: 'website',
     locale: 'ja_JP',
-    url: 'https://rhgj.jp',
-    siteName: '知恵塾',
-    title: '知恵塾 - 学習のためのオペレーティングシステム',
+    url: siteConfig.siteUrl,
+    siteName: siteConfig.brandName,
+    title: `${siteConfig.brandName} - 学習のためのオペレーティングシステム`,
     description: 'あなたと共に、あなたのために学びます。数分で研修を作成、アダプティブに配信し、すべての学習者に記憶するチューターを提供します。',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: '知恵塾 - 学習のためのオペレーティングシステム',
+        alt: `${siteConfig.brandName} - 学習のためのオペレーティングシステム`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '知恵塾 - 学習のためのオペレーティングシステム',
+    title: `${siteConfig.brandName} - 学習のためのオペレーティングシステム`,
     description: 'あなたと共に、あなたのために学びます。数分で研修を作成、アダプティブに配信し、すべての学習者に記憶するチューターを提供します。',
     images: ['/og-image.png'],
-    creator: '@知恵塾',
+    creator: `@${siteConfig.brandName}`,
   },
   robots: {
     index: true,

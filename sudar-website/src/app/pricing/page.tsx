@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Check, X, Sparkles, Zap, Building2 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { siteConfig } from '@/lib/site-config'
 
 export const metadata: Metadata = {
   title: '料金',
@@ -29,7 +30,7 @@ const plans = [
       { name: 'SLA保証', included: false },
     ],
     cta: '始めましょう',
-    ctaLink: 'https://learn.rhgj.jp',
+    ctaLink: siteConfig.ctaUrl,
     highlighted: false,
   },
   {

@@ -5,14 +5,14 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, Zap, BookOpen, Users, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { siteConfig } from '@/lib/site-config'
 
 const ctaOptions = [
   {
     icon: Zap,
     title: '学習を始める',
     description: 'VercelとRailwayの無料枠にデプロイ。SupabaseとAIの使用量のみお支払い。',
-    href: 'https://learn.rhgj.jp',
-    primary: true,
+    href: siteConfig.ctaUrl,
     external: true,
   },
   {
@@ -51,13 +51,13 @@ export function CTASection() {
             学習を変革する準備はできましたか？
           </h2>
           <p className="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed">
-            知恵塾を使ってパーソナライズされたアダプティブラーニング体験を
+            {siteConfig.brandName}を使ってパーソナライズされたアダプティブラーニング体験を
             提供している数千の教育者や組織に参加しましょう。今日から始めましょう。
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
-              href="https://learn.rhgj.jp"
+              href={siteConfig.ctaUrl}
               size="lg"
               variant="secondary"
               className="w-full sm:w-auto bg-white text-primary hover:bg-gray-100"

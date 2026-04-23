@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Zap, Github, Twitter, Linkedin, Mail } from 'lucide-react'
+import { siteConfig } from '@/lib/site-config'
 
 const footerLinks = {
   product: [
@@ -15,9 +16,10 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/sudar', icon: Twitter },
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/sudar', icon: Linkedin },
-  { name: 'Email', href: 'mailto:connect@dhanikeshkarunanithi.com', icon: Mail },
+  { name: 'Twitter', href: siteConfig.twitterUrl, icon: Twitter },
+  { name: 'LinkedIn', href: siteConfig.linkedInUrl, icon: Linkedin },
+  { name: 'GitHub', href: siteConfig.githubUrl, icon: Github },
+  { name: 'Email', href: `mailto:${siteConfig.contactEmail}`, icon: Mail },
 ]
 
 export function Footer() {
@@ -32,7 +34,7 @@ export function Footer() {
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <span className="text-2xl font-bold text-gray-900 dark:text-white font-serif">
-                知恵塾
+                {siteConfig.brandName}
               </span>
             </Link>
             <p className="mt-4 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -97,7 +99,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-gray-500 dark:text-gray-400">
-              © {new Date().getFullYear()} 知恵塾. All rights reserved.
+              © {new Date().getFullYear()} {siteConfig.brandName}. All rights reserved.
             </p>
             <div className="flex items-center space-x-6">
               <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -111,7 +113,7 @@ export function Footer() {
       {/* Large watermark text */}
       <div className="overflow-hidden pointer-events-none select-none">
         <div className="text-[20vw] font-bold text-gray-100 dark:text-gray-800 opacity-20 whitespace-nowrap transform -rotate-2 -mb-16">
-          知恵塾
+          {siteConfig.brandName}
         </div>
       </div>
     </footer>

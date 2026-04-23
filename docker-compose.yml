@@ -176,6 +176,15 @@ services:
       dockerfile: Dockerfile
       args:
         NEXT_PUBLIC_BASE_PATH: ${NEXT_PUBLIC_BASE_PATH_WEBSITE:-}
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://rhgj.jp}
+        NEXT_PUBLIC_BRAND_NAME: ${NEXT_PUBLIC_BRAND_NAME:-知恵塾}
+        NEXT_PUBLIC_CTA_URL: ${NEXT_PUBLIC_CTA_URL:-https://learn.rhgj.jp}
+        NEXT_PUBLIC_STUDIO_URL: ${NEXT_PUBLIC_STUDIO_URL:-https://learn.rhgj.jp}
+        NEXT_PUBLIC_LP_CTA_URL: ${NEXT_PUBLIC_LP_CTA_URL:-}
+        NEXT_PUBLIC_CONTACT_EMAIL: ${NEXT_PUBLIC_CONTACT_EMAIL:-connect@dhanikeshkarunanithi.com}
+        NEXT_PUBLIC_TWITTER_URL: ${NEXT_PUBLIC_TWITTER_URL:-https://twitter.com/sudar}
+        NEXT_PUBLIC_LINKEDIN_URL: ${NEXT_PUBLIC_LINKEDIN_URL:-https://linkedin.com/company/sudar}
+        NEXT_PUBLIC_GITHUB_URL: ${NEXT_PUBLIC_GITHUB_URL:-https://github.com/Dhanikesh-Karunanithi/Sudar}
     container_name: sudar-website
     restart: unless-stopped
     ports:

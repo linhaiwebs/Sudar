@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Moon, Sun, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
+import { siteConfig } from '@/lib/site-config'
 
 const navigation = [
   { name: '機能', href: '/features' },
@@ -61,7 +62,7 @@ export function Header() {
               <Zap className="w-6 h-6 text-white" />
             </motion.div>
             <span className="text-2xl font-bold text-gray-900 dark:text-white font-serif">
-              知恵塾
+              {siteConfig.brandName}
             </span>
           </Link>
 
@@ -91,7 +92,7 @@ export function Header() {
                 <Moon className="w-5 h-5 text-gray-600 dark:text-gray-300" />
               )}
             </button>
-            <Button href="https://learn.rhgj.jp" size="sm">
+            <Button href={siteConfig.ctaUrl} size="sm">
               始めましょう
             </Button>
           </div>
@@ -146,7 +147,7 @@ export function Header() {
                 </Link>
               ))}
               <div className="pt-4 border-t border-gray-200 dark:border-gray-800">
-                <Button href="https://learn.rhgj.jp" className="w-full mt-4">
+                <Button href={siteConfig.ctaUrl} className="w-full mt-4">
                   始めましょう
                 </Button>
               </div>

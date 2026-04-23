@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, Play, Sparkles, Users, BookOpen, Brain, Zap, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { siteConfig } from '@/lib/site-config'
 
 const stats = [
   { label: '作成されたコース', value: '10,000+' },
@@ -22,7 +23,7 @@ const features = [
   {
     icon: Sparkles,
     title: '記憶するAIチューター',
-    description: '知恵塾にお任せ - セッションを越えてすべての会話を記憶するパーソナルチューター。',
+    description: `${siteConfig.brandName}にお任せ - セッションを越えてすべての会話を記憶するパーソナルチューター。`,
   },
   {
     icon: BookOpen,
@@ -66,7 +67,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
           >
-            <span className="text-gray-900 dark:text-white font-serif">知恵塾</span>
+            <span className="text-gray-900 dark:text-white font-serif">{siteConfig.brandName}</span>
           </motion.h1>
 
           <motion.p
@@ -95,11 +96,11 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
-            <Button href="https://learn.rhgj.jp" size="lg" className="w-full sm:w-auto">
+            <Button href={siteConfig.ctaUrl} size="lg" className="w-full sm:w-auto">
               無料で始める
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button href="https://learn.rhgj.jp" variant="outline" size="lg" className="w-full sm:w-auto">
+            <Button href={siteConfig.ctaUrl} variant="outline" size="lg" className="w-full sm:w-auto">
               <Play className="mr-2 w-5 h-5" />
               デモを見る
             </Button>

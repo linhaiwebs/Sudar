@@ -3,11 +3,11 @@
  *
  * Conversion URL resolution order:
  *   1. `?cta=<url>` search param  (highest priority — per-campaign override)
- *   2. `NEXT_PUBLIC_LP_CTA_URL` env variable  (deployment-level default)
- *   3. Hard-coded fallback  (https://learn.rhgj.jp)
+ *   2. `NEXT_PUBLIC_LP_CTA_URL` / `NEXT_PUBLIC_CTA_URL` env variables
+ *   3. Centralized site config default
  */
 
-export const LP_DEFAULT_CTA_URL = 'https://learn.rhgj.jp'
+import { siteConfig } from './site-config'
 
 export function getLpCtaUrl(searchParams?: { get: (key: string) => string | null }): string {
   // 1. Per-campaign override via ?cta= query param
@@ -23,17 +23,6 @@ export function getLpCtaUrl(searchParams?: { get: (key: string) => string | null
     }
   }
 
-  // 2. Environment variable
-  const envUrl = process.env.NEXT_PUBLIC_LP_CTA_URL
-  if (envUrl) {
-    try {
-      new URL(envUrl)
-      return envUrl
-    } catch {
-      // Invalid URL — fall through
-    }
-  }
-
-  // 3. Default
-  return LP_DEFAULT_CTA_URL
+  // 2. Centralized site config (which reads env vars with defaults)
+  return siteConfig.lpCtaUrl
 }
