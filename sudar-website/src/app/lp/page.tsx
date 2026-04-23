@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import {
   TrendingUp,
@@ -10,17 +10,15 @@ import {
   ArrowRight,
   ChevronRight,
   Zap,
-  Users,
-  Clock,
   Check,
   LineChart,
-  Wallet,
   Brain,
 } from 'lucide-react'
-import { getLpCtaUrl } from '@/lib/lp-config'
 import { siteConfig } from '@/lib/site-config'
 
 /* ─── Data ──────────────────────────────────────────────── */
+
+const ctaUrl = siteConfig.lpCtaUrl
 
 const valueProps = [
   {
@@ -69,13 +67,6 @@ const stockTopics = [
 /* ─── Component ─────────────────────────────────────────── */
 
 export default function LpPage() {
-  const [ctaUrl, setCtaUrl] = useState('')
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search)
-    setCtaUrl(getLpCtaUrl(params))
-  }, [])
-
   const { scrollYProgress } = useScroll()
   const heroOpacity = useTransform(scrollYProgress, [0, 0.12], [1, 0])
   const heroScale = useTransform(scrollYProgress, [0, 0.12], [1, 0.97])

@@ -1,24 +1,21 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
-import '../globals.css'
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+import { siteConfig } from '@/lib/site-config'
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
-  themeColor: '#6366F1',
+  themeColor: '#1E293B',
 }
 
 export const metadata: Metadata = {
-  title: '知恵塾 — あなたと共に、あなたのために学びます',
+  title: `${siteConfig.brandName} — 株式投資を、AIと共に学ぶ`,
   description:
-    'AIネイティブな学習OS。数分で研修を作成、アダプティブに配信し、すべての学習者に記憶するチューターを提供します。',
+    'AI搭載の株式教育プラットフォーム。日本株の基礎から実践まで、アダプティブラーニングで身につける。リスクゼロのシミュレーション付き。',
   openGraph: {
-    title: '知恵塾 — あなたと共に、あなたのために学びます',
+    title: `${siteConfig.brandName} — 株式投資を、AIと共に学ぶ`,
     description:
-      'AIネイティブな学習OS。数分で研修を作成、アダプティブに配信し、すべての学習者に記憶するチューターを提供します。',
+      'AI搭載の株式教育プラットフォーム。日本株の基礎から実践まで、アダプティブラーニングで身につける。',
     type: 'website',
     locale: 'ja_JP',
   },
@@ -30,10 +27,8 @@ export default function LpLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ja" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased bg-finance-navy text-white`}>
-        {children}
-      </body>
-    </html>
+    <div className="bg-finance-navy text-white">
+      {children}
+    </div>
   )
 }
