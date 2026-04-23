@@ -31,7 +31,7 @@ export default function LpLayout({
 }) {
   return (
     <html lang="ja" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased bg-white dark:bg-gray-950`}>
+      <body className={`${inter.variable} font-sans antialiased bg-finance-navy text-white`}>
         {children}
       </body>
     </html>
