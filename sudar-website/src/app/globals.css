@@ -110,6 +110,10 @@
     background-color: rgba(31, 41, 55, 0.6);
     border-color: rgba(55, 65, 81, 0.3);
   }
+
+  .safe-area-bottom {
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  }
 }
 
 /* Animations */
