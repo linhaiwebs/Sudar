@@ -32,4 +32,7 @@ export const siteConfig = {
 
   /** Landing-page CTA URL (defaults to the same as ctaUrl) */
   lpCtaUrl: process.env.NEXT_PUBLIC_LP_CTA_URL || process.env.NEXT_PUBLIC_CTA_URL || 'https://learn.rhgj.jp',
+
+  /** Google Analytics Measurement ID (e.g. G-XXXXXXXXXX) */
+  gaMeasurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || '',
 } as const
