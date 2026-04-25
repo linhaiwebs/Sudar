@@ -30,7 +30,7 @@ export default function TermsPage() {
 
           <h2>2. 定義</h2>
           <ul>
-            <li>「本サービス」— {siteConfig.brandName}プラットフォーム（Studio、Learn、Intelligence）</li>
+            <li>「本サービス」— {siteConfig.brandName}プラットフォーム（{siteConfig.studioName}、{siteConfig.learnName}、{siteConfig.intelligenceName}）</li>
             <li>「ユーザー」— 本サービスに登録し、利用する個人または法人</li>
             <li>「コンテンツ」— ユーザーが作成・アップロードしたコース、メディア、データ</li>
           </ul>

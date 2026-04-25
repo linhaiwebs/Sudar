@@ -4,8 +4,8 @@ import { ArrowLeft, FileText, Cpu, Sparkles, Layers, BarChart3, Globe, CheckCirc
 import { siteConfig } from '@/lib/site-config'
 
 export const metadata: Metadata = {
-  title: 'Studio — 機能詳細',
-  description: `${siteConfig.brandName} Studioの機能詳細 — AI搭載コース作成ツール。`,
+  title: `${siteConfig.studioName} — 機能詳細`,
+  description: `${siteConfig.studioFullName}の機能詳細 — AI搭載コース作成ツール。`,
 }
 
 const features = [
@@ -63,7 +63,7 @@ export default function StudioFeaturesPage() {
             </div>
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4 font-serif">
-            {siteConfig.brandName} Studio
+            {siteConfig.studioFullName}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
             数週間ではなく数分でプロフェッショナルなコースを構築。L&DチームのためのAI搭載オーサリングプラットフォーム。
@@ -103,7 +103,7 @@ export default function StudioFeaturesPage() {
             今すぐコースを作成しましょう
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8">
-            {siteConfig.brandName} Studioで数分でプロフェッショナルなコースを構築。
+            {siteConfig.studioFullName}で数分でプロフェッショナルなコースを構築。
           </p>
           <a
             href={siteConfig.ctaUrl}

@@ -20,7 +20,7 @@ const timeline = [
   {
     year: '2025',
     title: '基盤構築',
-    description: 'クリエイター向けのStudio、学習者向けのLearn、AIブレインとしてのIntelligenceという3つのコアサーフェスをローンチ。',
+    description: `クリエイター向けの${siteConfig.studioName}、学習者向けの${siteConfig.learnName}、AIブレインとしての${siteConfig.intelligenceName}という3つのコアサーフェスをローンチ。`,
   },
   {
     year: '2026',
@@ -144,7 +144,7 @@ export default function AboutPage() {
               3つのサーフェス、1つのビジョン
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              Studio、Learn、Intelligenceがひとつの学習者モデルの周りで連携。
+              {siteConfig.studioName}、{siteConfig.learnName}、{siteConfig.intelligenceName}がひとつの学習者モデルの周りで連携。
             </p>
           </div>
 
@@ -152,18 +152,18 @@ export default function AboutPage() {
             {[
               {
                 step: '01',
-                name: `${B} Studio`,
-                description: '管理・クリエイター向けサーフェス。ドキュメント、URL、プロンプトからコースを構築。AIが構造とコンテンツを生成。Learnに公開。',
+                name: siteConfig.studioFullName,
+                description: `管理・クリエイター向けサーフェス。ドキュメント、URL、プロンプトからコースを構築。AIが構造とコンテンツを生成。${siteConfig.learnName}に公開。`,
               },
               {
                 step: '02',
-                name: `${B} Learn`,
+                name: siteConfig.learnFullName,
                 description: '学習者向け配信サーフェス。パーソナライズされたダッシュボード、モダリティ選択、AIチューター - すべてデジタル学習ツインが駆動。',
               },
               {
                 step: '03',
-                name: `${B} Intelligence`,
-                description: `AIブレイン。アダプティブエンジン、縦断的記憶、ネクストベストアクション、チューター「${B}」 - 好奇心旺盛で温かく知識豊か。`,
+                name: siteConfig.intelligenceFullName,
+                description: `AIブレイン。アダプティブエンジン、縦断的記憶、ネクストベストアクション、チューター「${siteConfig.tutorName}」 - 好奇心旺盛で温かく知識豊か。`,
               },
             ].map((surface, index) => (
               <div

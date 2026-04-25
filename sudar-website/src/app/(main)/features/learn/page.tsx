@@ -6,14 +6,14 @@ import { siteConfig } from '@/lib/site-config'
 const B = siteConfig.brandName
 
 export const metadata: Metadata = {
-  title: 'Learn — 機能詳細',
-  description: `${siteConfig.brandName} Learnの機能詳細 — パーソナライズされたアダプティブラーニング体験。`,
+  title: `${siteConfig.learnName} — 機能詳細`,
+  description: `${siteConfig.learnFullName}の機能詳細 — パーソナライズされたアダプティブラーニング体験。`,
 }
 
 const features = [
   {
     icon: MessageSquare,
-    title: `AIチューター「${B}」`,
+    title: `AIチューター「${siteConfig.tutorName}」`,
     description: 'セッションを越えてすべての会話を記憶するパーソナルチューター。質問に答え、説明を提供し、あなたの学習コンテキストを忘れません。',
     details: ['RAG搭載Q&A', '縦断的記憶', 'プロアクティブなナッジ', '多言語対応'],
   },
@@ -65,7 +65,7 @@ export default function LearnFeaturesPage() {
             </div>
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4 font-serif">
-            {siteConfig.brandName} Learn
+            {siteConfig.learnFullName}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl">
             各個人に適応するパーソナライズされた学習体験。AIチューターがすべてを記憶します。
@@ -105,7 +105,7 @@ export default function LearnFeaturesPage() {
             パーソナライズされた学習を始めましょう
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mb-8">
-            {siteConfig.brandName} Learnであなたに最適な学習体験を。
+            {siteConfig.learnFullName}であなたに最適な学習体験を。
           </p>
           <a
             href={siteConfig.ctaUrl}

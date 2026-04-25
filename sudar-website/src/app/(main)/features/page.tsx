@@ -34,7 +34,7 @@ export default function FeaturesPage() {
               クリエイター向け
             </div>
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 font-serif">
-              {B} Studio
+              {siteConfig.studioFullName}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
               数週間ではなく数分でプロフェッショナルなコースを構築。インストラクショナルデザインの専門知識は不要。
@@ -108,7 +108,7 @@ export default function FeaturesPage() {
               学習者向け
             </div>
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 font-serif">
-              {B} Learn
+              {siteConfig.learnFullName}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
               各個人に適応するパーソナライズされた学習体験。AIチューターがすべてを記憶します。
@@ -118,7 +118,7 @@ export default function FeaturesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: `AIチューター「${B}」`,
+                title: `AIチューター「${siteConfig.tutorName}」`,
                 description: '縦断的記憶を持つパーソナルチューター。質問に答え、説明を提供し、あなたのコンテキストを記憶。',
                 features: ['RAG搭載Q&A', '縦断的記憶', 'プロアクティブなナッジ', '多言語対応'],
               },

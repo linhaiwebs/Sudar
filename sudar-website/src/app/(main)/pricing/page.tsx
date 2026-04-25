@@ -19,9 +19,9 @@ const plans = [
     description: 'フルコントロールを求めるチームに最適',
     icon: Zap,
     features: [
-      { name: `${B} Studioフルアクセス`, included: true },
-      { name: `${B} Learnフルアクセス`, included: true },
-      { name: `${B} Intelligenceエンジン`, included: true },
+      { name: `${B} ${siteConfig.studioName}フルアクセス`, included: true },
+      { name: `${B} ${siteConfig.learnName}フルアクセス`, included: true },
+      { name: `${B} ${siteConfig.intelligenceName}エンジン`, included: true },
       { name: '7つの学習モダリティ', included: true },
       { name: 'SCORMエクスポート/インポート', included: true },
       { name: '記憶するAIチューター', included: true },

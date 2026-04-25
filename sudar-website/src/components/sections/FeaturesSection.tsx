@@ -32,7 +32,7 @@ const studioFeatures = [
 ]
 
 const learnFeatures = [
-  { icon: MessageSquare, title: `AIチューター「${B}」`, description: '記憶するパーソナルチューター' },
+  { icon: MessageSquare, title: `AIチューター「${siteConfig.tutorName}」`, description: '記憶するパーソナルチューター' },
   { icon: Users, title: 'デジタル学習ツイン', description: 'あなたの学習プロファイルが進化' },
   { icon: ArrowRight, title: 'ネクストベストアクション', description: 'AIが次にやるべきことを提案' },
   { icon: Clock, title: '学習ストリーク', description: 'ストリークでモチベーション維持' },
@@ -69,9 +69,9 @@ export function FeaturesSection() {
           className="grid md:grid-cols-3 gap-8 mb-20"
         >
           {[
-            { name: 'Studio', role: '作成', description: 'AI搭載オーサリングで数分でコースを構築' },
-            { name: 'Learn', role: '配信', description: 'パーソナライズされたアダプティブラーニング体験' },
-            { name: 'Intelligence', role: '適応', description: 'すべての学習者を学習するAIブレイン' },
+            { name: siteConfig.studioName, role: '作成', description: 'AI搭載オーサリングで数分でコースを構築' },
+            { name: siteConfig.learnName, role: '配信', description: 'パーソナライズされたアダプティブラーニング体験' },
+            { name: siteConfig.intelligenceName, role: '適応', description: 'すべての学習者を学習するAIブレイン' },
           ].map((pillar, index) => (
             <motion.div
               key={index}
@@ -141,7 +141,7 @@ export function FeaturesSection() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white font-serif">
-                {B} Studio
+                {B} {siteConfig.studioName}
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mt-2">
                 L&Dチームとコンテンツクリエイター向け
@@ -190,7 +190,7 @@ export function FeaturesSection() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white font-serif">
-                {B} Learn
+                {B} {siteConfig.learnName}
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mt-2">
                 学習者と研修参加者向け

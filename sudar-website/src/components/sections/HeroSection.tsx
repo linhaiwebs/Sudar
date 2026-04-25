@@ -23,7 +23,7 @@ const features = [
   {
     icon: Sparkles,
     title: '記憶するAIチューター',
-    description: `${siteConfig.brandName}にお任せ - セッションを越えてすべての会話を記憶するパーソナルチューター。`,
+    description: `${siteConfig.tutorName}にお任せ - セッションを越えてすべての会話を記憶するパーソナルチューター。`,
   },
   {
     icon: BookOpen,

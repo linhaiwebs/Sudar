@@ -120,7 +120,7 @@ export default function LpPage() {
             transition={{ duration: 0.5, delay: 0.16 }}
             className="text-xl text-finance-gold-light font-semibold mb-3"
           >
-            株式投資を、AIと共に学ぶ
+            {siteConfig.lpTagline}
           </motion.p>
 
           {/* Description */}
@@ -130,7 +130,7 @@ export default function LpPage() {
             transition={{ duration: 0.5, delay: 0.24 }}
             className="text-sm text-gray-400 leading-relaxed mb-7"
           >
-            日本株の基礎から実践まで、AIチューターがあなたのレベルに合わせてアダプティブに指導。
+            {siteConfig.lpSubtitle}
             <br />
             <span className="text-finance-gold-light font-medium">
               リスクゼロのシミュレーションで、自信を持って投資を始めよう。
@@ -145,7 +145,7 @@ export default function LpPage() {
             transition={{ duration: 0.5, delay: 0.32 }}
             className="inline-flex items-center justify-center gap-2 w-full rounded-xl bg-gradient-to-r from-finance-gold to-finance-gold-light px-6 py-4 text-base font-bold text-finance-navy shadow-lg shadow-finance-gold/30 active:scale-[0.98] transition-transform"
           >
-            無料で投資学習を始める
+            {siteConfig.lpCtaLabel}
             <ArrowRight className="w-5 h-5" />
           </motion.a>
 
@@ -156,7 +156,7 @@ export default function LpPage() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="mt-3 text-[11px] text-gray-500"
           >
-            クレジットカード不要 • 実際の資金は不要 • 今すぐ始められます
+            {siteConfig.lpCtaTrust}
           </motion.p>
         </div>
       </motion.section>
@@ -346,7 +346,7 @@ export default function LpPage() {
             href={ctaUrl}
             className="inline-flex items-center justify-center gap-2 w-full rounded-xl bg-gradient-to-r from-finance-gold to-finance-gold-light px-6 py-4 text-base font-bold text-finance-navy shadow-lg shadow-finance-gold/30 active:scale-[0.98] transition-transform"
           >
-            無料で投資学習を始める
+            {siteConfig.lpCtaLabel}
             <ArrowRight className="w-5 h-5" />
           </a>
           <p className="mt-3 text-[11px] text-gray-500">
@@ -365,7 +365,7 @@ export default function LpPage() {
             <span className="text-sm font-bold font-serif">{siteConfig.brandName}</span>
           </div>
           <p className="text-[11px] text-gray-500 text-center">
-            © {new Date().getFullYear()} {siteConfig.brandName} — 株式投資を、AIと共に学ぶ
+            © {new Date().getFullYear()} {siteConfig.brandName} — {siteConfig.lpFooterCopy}
           </p>
         </div>
       </footer>
@@ -376,7 +376,7 @@ export default function LpPage() {
           href={ctaUrl}
           className="flex items-center justify-center gap-2 w-full rounded-xl bg-gradient-to-r from-finance-gold to-finance-gold-light px-5 py-3.5 text-sm font-bold text-finance-navy shadow-lg shadow-finance-gold/25 active:scale-[0.98] transition-transform"
         >
-          無料で投資学習を始める
+          {siteConfig.lpCtaLabel}
           <ArrowRight className="w-4 h-4" />
         </a>
       </div>

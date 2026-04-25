@@ -29,7 +29,7 @@ const steps = [
     number: '03',
     icon: Rocket,
     title: '公開＆登録',
-    description: `ワンクリックで${B} Learnに公開。チームに割り当て、期限を設定、進捗を自動追跡。`,
+    description: `ワンクリックで${B} ${siteConfig.learnName}に公開。チームに割り当て、期限を設定、進捗を自動追跡。`,
     color: 'from-accent to-blue-500',
   },
   {
