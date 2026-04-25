@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { ArrowLeft, BookOpen, Brain, BarChart3, GraduationCap, Microscope, Lightbulb } from 'lucide-react'
 import { siteConfig } from '@/lib/site-config'
 
+const B = siteConfig.brandName
+
 export const metadata: Metadata = {
   title: '研究基盤',
   description: `${siteConfig.brandName}の研究基盤 — アダプティブラーニングとAIチュータリングの学術的基礎。`,
@@ -21,7 +23,7 @@ const pillars = [
   {
     icon: GraduationCap,
     title: 'インテリジェントチュータリングシステム',
-    description: 'AIが学習者の理解度をリアルタイムに推定し、個別化されたフィードバックと指導を提供。知恵塾のチューターは「縦断的記憶」により、セッションを越えて学習者の文脈を維持します。',
+    description: `AIが学習者の理解度をリアルタイムに推定し、個別化されたフィードバックと指導を提供。${B}のチューターは「縦断的記憶」により、セッションを越えて学習者の文脈を維持します。`,
     references: [
       'Graesser, A.C. et al. (2018). Intelligent Tutoring Systems. Springer.',
       'VanLehn, K. (2011). The Relative Effectiveness of Human Tutoring, Intelligent Tutoring Systems, and Other Tutoring Systems. Educational Psychologist.',

@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { ArrowLeft, MessageSquare, Users, BookOpen, Cpu, Clock, Smartphone, CheckCircle } from 'lucide-react'
 import { siteConfig } from '@/lib/site-config'
 
+const B = siteConfig.brandName
+
 export const metadata: Metadata = {
   title: 'Learn — 機能詳細',
   description: `${siteConfig.brandName} Learnの機能詳細 — パーソナライズされたアダプティブラーニング体験。`,
@@ -11,7 +13,7 @@ export const metadata: Metadata = {
 const features = [
   {
     icon: MessageSquare,
-    title: 'AIチューター「知恵塾」',
+    title: `AIチューター「${B}」`,
     description: 'セッションを越えてすべての会話を記憶するパーソナルチューター。質問に答え、説明を提供し、あなたの学習コンテキストを忘れません。',
     details: ['RAG搭載Q&A', '縦断的記憶', 'プロアクティブなナッジ', '多言語対応'],
   },

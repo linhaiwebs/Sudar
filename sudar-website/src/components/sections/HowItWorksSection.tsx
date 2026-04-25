@@ -6,6 +6,9 @@ import {
   Upload, Wand2, Rocket, Users, Brain, BarChart,
   ArrowRight, CheckCircle, Sparkles
 } from 'lucide-react'
+import { siteConfig } from '@/lib/site-config'
+
+const B = siteConfig.brandName
 
 const steps = [
   {
@@ -26,14 +29,14 @@ const steps = [
     number: '03',
     icon: Rocket,
     title: '公開＆登録',
-    description: 'ワンクリックで知恵塾 Learnに公開。チームに割り当て、期限を設定、進捗を自動追跡。',
+    description: `ワンクリックで${B} Learnに公開。チームに割り当て、期限を設定、進捗を自動追跡。`,
     color: 'from-accent to-blue-500',
   },
   {
     number: '04',
     icon: Brain,
     title: 'AIが学習を適応',
-    description: 'デジタル学習ツインが行動を観察。知恵塾がモダリティ、ペース、難易度を各個人に適応させます。',
+    description: `デジタル学習ツインが行動を観察。${B}がモダリティ、ペース、難易度を各個人に適応させます。`,
     color: 'from-pink-500 to-rose-500',
   },
 ]
@@ -63,7 +66,7 @@ export function HowItWorksSection() {
             仕組みは<span className="text-primary">シンプル</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            ドキュメントからデプロイ済みコースまで、4つのステップで完了。知恵塾が複雑さを処理するので、あなたは結果に集中できます。
+            ドキュメントからデプロイ済みコースまで、4つのステップで完了。{B}が複雑さを処理するので、あなたは結果に集中できます。
           </p>
         </motion.div>
 
@@ -116,7 +119,7 @@ export function HowItWorksSection() {
           <div className="flex items-center space-x-3 mb-8">
             <Sparkles className="w-6 h-6 text-primary" />
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-              組織が知恵塾を選ぶ理由
+              組織が{B}を選ぶ理由
             </h3>
           </div>
           

@@ -4,9 +4,11 @@ import { Check, X, Sparkles, Zap, Building2 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { siteConfig } from '@/lib/site-config'
 
+const B = siteConfig.brandName
+
 export const metadata: Metadata = {
   title: '料金',
-  description: '知恵塾はオープンソースでセルフホスト無料。あなたの組織に最適なプランをお選びください。',
+  description: `${B}はオープンソースでセルフホスト無料。あなたの組織に最適なプランをお選びください。`,
 }
 
 const plans = [
@@ -17,9 +19,9 @@ const plans = [
     description: 'フルコントロールを求めるチームに最適',
     icon: Zap,
     features: [
-      { name: '知恵塾 Studioフルアクセス', included: true },
-      { name: '知恵塾 Learnフルアクセス', included: true },
-      { name: '知恵塾 Intelligenceエンジン', included: true },
+      { name: `${B} Studioフルアクセス`, included: true },
+      { name: `${B} Learnフルアクセス`, included: true },
+      { name: `${B} Intelligenceエンジン`, included: true },
       { name: '7つの学習モダリティ', included: true },
       { name: 'SCORMエクスポート/インポート', included: true },
       { name: '記憶するAIチューター', included: true },
@@ -83,8 +85,8 @@ const plans = [
 
 const faqs = [
   {
-    question: '知恵塾は本当に無料ですか？',
-    answer: 'はい！知恵塾はApache-2.0ライセンスのオープンソースです。$0でセルフホストできます。お支払いが必要なのは、ご自身のインフラ（Vercel、Railway/Renderの無料枠で動作します）とAI APIの使用量（Together AI、OpenAIなど）のみです。',
+    question: `${B}は本当に無料ですか？`,
+    answer: `はい！${B}はApache-2.0ライセンスのオープンソースです。$0でセルフホストできます。お支払いが必要なのは、ご自身のインフラ（Vercel、Railway/Renderの無料枠で動作します）とAI APIの使用量（Together AI、OpenAIなど）のみです。`,
   },
   {
     question: 'セルフホストの注意点は？',
@@ -100,7 +102,7 @@ const faqs = [
   },
   {
     question: '他のLMSから移行できますか？',
-    answer: 'はい！知恵塾はSCORM 1.2インポートに対応しているため、既存のコースを移行できます。主要なLMSプラットフォーム向けの移行ツールとドキュメントも提供しています。',
+    answer: `はい！${B}はSCORM 1.2インポートに対応しているため、既存のコースを移行できます。主要なLMSプラットフォーム向けの移行ツールとドキュメントも提供しています。`,
   },
   {
     question: 'クラウドプランの無料トライアルはありますか？',
@@ -123,7 +125,7 @@ export default function PricingPage() {
               <span className="text-primary">料金設定</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              知恵塾を無料でセルフホストするか、私たちにお任せください。隠し料金もサプライズもありません。
+              {B}を無料でセルフホストするか、私たちにお任せください。隠し料金もサプライズもありません。
             </p>
           </div>
         </div>

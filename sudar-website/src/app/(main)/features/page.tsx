@@ -1,8 +1,11 @@
 import { Metadata } from 'next'
+import { siteConfig } from '@/lib/site-config'
+
+const B = siteConfig.brandName
 
 export const metadata: Metadata = {
   title: '機能',
-  description: '知恵塾のすべての強力な機能 - AI搭載コース作成、アダプティブラーニング、AIチューターなど。',
+  description: `${B}のすべての強力な機能 - AI搭載コース作成、アダプティブラーニング、AIチューターなど。`,
 }
 
 export default function FeaturesPage() {
@@ -31,7 +34,7 @@ export default function FeaturesPage() {
               クリエイター向け
             </div>
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 font-serif">
-              知恵塾 Studio
+              {B} Studio
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
               数週間ではなく数分でプロフェッショナルなコースを構築。インストラクショナルデザインの専門知識は不要。
@@ -105,7 +108,7 @@ export default function FeaturesPage() {
               学習者向け
             </div>
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 font-serif">
-              知恵塾 Learn
+              {B} Learn
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
               各個人に適応するパーソナライズされた学習体験。AIチューターがすべてを記憶します。
@@ -115,7 +118,7 @@ export default function FeaturesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: 'AIチューター「知恵塾」',
+                title: `AIチューター「${B}」`,
                 description: '縦断的記憶を持つパーソナルチューター。質問に答え、説明を提供し、あなたのコンテキストを記憶。',
                 features: ['RAG搭載Q&A', '縦断的記憶', 'プロアクティブなナッジ', '多言語対応'],
               },

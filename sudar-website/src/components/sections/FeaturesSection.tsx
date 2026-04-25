@@ -8,6 +8,9 @@ import {
   Clock, Users, CheckCircle, ArrowRight
 } from 'lucide-react'
 import Link from 'next/link'
+import { siteConfig } from '@/lib/site-config'
+
+const B = siteConfig.brandName
 
 const modalities = [
   { icon: FileText, name: 'リーディング', description: '従来のテキストベース学習' },
@@ -15,8 +18,8 @@ const modalities = [
   { icon: Headphones, name: 'オーディオ', description: 'ポッドキャスト形式のナレーション' },
   { icon: Map, name: 'マインドマップ', description: 'ビジュアル概念マッピング' },
   { icon: Layers, name: 'フラッシュカード', description: '間隔反復カード' },
-  { icon: Play, name: '知恵塾フィード', description: 'TikTok風マイクロラーニング' },
-  { icon: Gamepad2, name: '知恵塾プレイ', description: 'ゲーム化学習体験' },
+  { icon: Play, name: `${B}フィード`, description: 'TikTok風マイクロラーニング' },
+  { icon: Gamepad2, name: `${B}プレイ`, description: 'ゲーム化学習体験' },
 ]
 
 const studioFeatures = [
@@ -29,7 +32,7 @@ const studioFeatures = [
 ]
 
 const learnFeatures = [
-  { icon: MessageSquare, title: 'AIチューター「知恵塾」', description: '記憶するパーソナルチューター' },
+  { icon: MessageSquare, title: `AIチューター「${B}」`, description: '記憶するパーソナルチューター' },
   { icon: Users, title: 'デジタル学習ツイン', description: 'あなたの学習プロファイルが進化' },
   { icon: ArrowRight, title: 'ネクストベストアクション', description: 'AIが次にやるべきことを提案' },
   { icon: Clock, title: '学習ストリーク', description: 'ストリークでモチベーション維持' },
@@ -53,7 +56,7 @@ export function FeaturesSection() {
             ひとつのプラットフォーム、<span className="text-primary">無限の可能性</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            知恵塾はコース作成、配信、インテリジェントな適応をひとつのシームレスな体験に統合します。
+            {B}はコース作成、配信、インテリジェントな適応をひとつのシームレスな体験に統合します。
           </p>
         </motion.div>
 
@@ -79,7 +82,7 @@ export function FeaturesSection() {
                 {pillar.role}
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 font-serif">
-                知恵塾 {pillar.name}
+                {B} {pillar.name}
               </h3>
               <p className="text-gray-600 dark:text-gray-400">
                 {pillar.description}
@@ -138,7 +141,7 @@ export function FeaturesSection() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white font-serif">
-                知恵塾 Studio
+                {B} Studio
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mt-2">
                 L&Dチームとコンテンツクリエイター向け
@@ -187,7 +190,7 @@ export function FeaturesSection() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white font-serif">
-                知恵塾 Learn
+                {B} Learn
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mt-2">
                 学習者と研修参加者向け

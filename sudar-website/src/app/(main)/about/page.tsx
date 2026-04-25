@@ -4,16 +4,18 @@ import { ArrowRight, Target, Heart, Globe, Sparkles, Users, BookOpen } from 'luc
 import { Button } from '@/components/ui/Button'
 import { siteConfig } from '@/lib/site-config'
 
+const B = siteConfig.brandName
+
 export const metadata: Metadata = {
   title: '概要',
-  description: '知恵塾のミッション - すべての人にパーソナライズされたアダプティブラーニングを民主化する。',
+  description: `${B}のミッション - すべての人にパーソナライズされたアダプティブラーニングを民主化する。`,
 }
 
 const timeline = [
   {
     year: '2024',
     title: 'ビジョン',
-    description: '知恵塾は、教育の世界を修正し、アダプティブラーニングを誰もが利用できるようにするという、一人のビルダーのビジョンから始まりました。',
+    description: `${B}は、教育の世界を修正し、アダプティブラーニングを誰もが利用できるようにするという、一人のビルダーのビジョンから始まりました。`,
   },
   {
     year: '2025',
@@ -23,7 +25,7 @@ const timeline = [
   {
     year: '2026',
     title: 'オープンソースリリース',
-    description: '知恵塾はApache-2.0の下で完全にオープンソース化。$0でのセルフホストが現実に。',
+    description: `${B}はApache-2.0の下で完全にオープンソース化。$0でのセルフホストが現実に。`,
   },
   {
     year: '未来',
@@ -71,7 +73,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6 font-serif">
-              知恵塾の{' '}
+              {B}の{' '}
               <span className="text-primary">ストーリー</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
@@ -87,7 +89,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6 font-serif">
-                知恵塾が存在する理由
+                {B}が存在する理由
               </h2>
               <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
                 <p>
@@ -100,7 +102,7 @@ export default function AboutPage() {
                   記憶対応チューティングを提供していません。
                 </p>
                 <p>
-                  <span className="font-semibold text-gray-900 dark:text-white">知恵塾がそのギャップを埋めます。</span> 
+                  <span className="font-semibold text-gray-900 dark:text-white">{B}がそのギャップを埋めます。</span> 
                   一人のビルダーのビジョンとして始まりました：オーサリング、配信、インテリジェンスを
                   永続的なデジタル学習ツインの周りに統一し、これまで一部の人にしか利用できなかった
                   アダプティブでインテリジェントな教育をすべての学習者に提供するプラットフォーム。
@@ -125,7 +127,7 @@ export default function AboutPage() {
                     「あなたと共に、あなたのために学びます。」
                   </p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    — 知恵塾のコアプロミス
+                    — {B}のコアプロミス
                   </p>
                 </div>
               </div>
@@ -150,18 +152,18 @@ export default function AboutPage() {
             {[
               {
                 step: '01',
-                name: '知恵塾 Studio',
+                name: `${B} Studio`,
                 description: '管理・クリエイター向けサーフェス。ドキュメント、URL、プロンプトからコースを構築。AIが構造とコンテンツを生成。Learnに公開。',
               },
               {
                 step: '02',
-                name: '知恵塾 Learn',
+                name: `${B} Learn`,
                 description: '学習者向け配信サーフェス。パーソナライズされたダッシュボード、モダリティ選択、AIチューター - すべてデジタル学習ツインが駆動。',
               },
               {
                 step: '03',
-                name: '知恵塾 Intelligence',
-                description: 'AIブレイン。アダプティブエンジン、縦断的記憶、ネクストベストアクション、チューター「知恵塾」 - 好奇心旺盛で温かく知識豊か。',
+                name: `${B} Intelligence`,
+                description: `AIブレイン。アダプティブエンジン、縦断的記憶、ネクストベストアクション、チューター「${B}」 - 好奇心旺盛で温かく知識豊か。`,
               },
             ].map((surface, index) => (
               <div
@@ -249,7 +251,7 @@ export default function AboutPage() {
               ビルダー
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              知恵塾は愛情と情熱を持って開発されたソロビルドプロジェクトです。
+              {B}は愛情と情熱を持って開発されたソロビルドプロジェクトです。
             </p>
           </div>
 
